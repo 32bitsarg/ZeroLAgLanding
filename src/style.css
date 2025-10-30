@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Base tokens para un diseño oscuro moderno */
+:root {
+  color-scheme: dark;
+  --color-bg: #1a1819;
+  --color-text: #ffffff;
+  --color-accent: #c02022;
+}
+
+/* Fuentes de marca */
+@font-face {
+  font-family: "Arcade Gamer";
+  src:
+    url("/assets/fonts/arcade-gamer.woff2") format("woff2"),
+    url("/assets/fonts/arcade-gamer.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-heading: "Arcade Gamer", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  @apply antialiased;
+}
+
+.container-base {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Utilidades de fuente */
+.font-arcade { font-family: var(--font-heading); }
+
+/* Escala tipográfica responsiva para las nuevas fuentes */
+.heading-1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 3rem);
+  line-height: 1.05;
+}
+
+.heading-2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.25rem, 1.8vw + 0.5rem, 2rem);
+  line-height: 1.1;
+}
+
+.heading-3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.125rem, 1.2vw + 0.5rem, 1.5rem);
+  line-height: 1.15;
+}
+
+.body-lg {
+  font-family: var(--font-body);
+  font-size: clamp(1.0625rem, 0.55vw + 0.95rem, 1.35rem);
+  line-height: 1.7;
+}
+
+.body-sm {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+/* Botones con acento rojo */
+.btn-accent {
+  background-color: var(--color-accent);
+  transition: all 0.2s ease;
+}
+.btn-accent:hover {
+  background-color: #d82628;
+  box-shadow: 0 0 20px rgba(192, 32, 34, 0.4);
+  transform: translateY(-1px);
+}
