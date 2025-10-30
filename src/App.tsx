@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Gamepad2, Hammer, Server, Swords, UsersRound, Instagram, MessageCircle } from 'lucide-react'
+import { ArrowRight, Gamepad2, Hammer, Server, Swords, Instagram, MessageCircle } from 'lucide-react'
 import Logo from './components/Logo'
 
 const Section: React.FC<{ id?: string; className?: string; children: React.ReactNode }> = ({ id, className, children }) => (
